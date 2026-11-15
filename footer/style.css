@@ -1,0 +1,325 @@
+/* Enova Luxury Footer Styling — Navy & Champagne Gold Theme */
+:root {
+  --navy: #1C2B4A;
+  --navy-dark: #142038;
+  --champagne-gold: #B8925A;
+  --gold-hover: #caa66d;
+  --off-white: #FAF9F6;
+  --light-beige: #EAE6DF;
+  --charcoal: #1A1F2B;
+  
+  --footer-bg: #1C2B4A;
+  --footer-bg-dark: #142038;
+  --footer-accent: #B8925A;
+  --footer-white: #FAF9F6;
+  --footer-muted: rgba(250, 249, 246, 0.78);
+  --footer-line: rgba(234, 230, 223, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--off-white);
+  color: var(--charcoal);
+}
+
+.site-footer {
+  background: var(--footer-bg);
+  background: linear-gradient(180deg, #1C2B4A 0%, #142038 100%);
+  color: var(--footer-white);
+  padding: 56px 0 0;
+  border-top: 1px solid rgba(184, 146, 90, 0.25);
+}
+
+.footer-container { width: 100%; }
+
+.top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  align-items: start;
+}
+
+.brand-lockup { 
+  color: inherit; 
+  text-decoration: none; 
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 64px;
+  height: 64px;
+  background: var(--off-white);
+  color: var(--navy);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 0 4px 4px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(184, 146, 90, 0.4);
+}
+
+.brand-mark span { 
+  color: var(--champagne-gold); 
+  font-size: 38px; 
+  align-self: flex-start; 
+  margin: 2px 0 0 1px; 
+}
+
+.brand-name { 
+  font-family: 'Inter', Georgia, serif; 
+  font-size: 34px; 
+  font-weight: 800; 
+  letter-spacing: -1px; 
+  color: var(--off-white);
+}
+
+.brand-name span {
+  color: var(--champagne-gold);
+}
+
+.brand-tagline { 
+  margin: 18px 0 0; 
+  font-size: 16px; 
+  color: var(--footer-muted);
+  letter-spacing: 0.02em;
+}
+
+.social-block { margin-top: 48px; }
+.footer-heading { 
+  margin: 0; 
+  font-size: 19px; 
+  line-height: 1.3; 
+  font-weight: 700; 
+  color: var(--off-white);
+  letter-spacing: -0.01em;
+}
+
+.social-links { margin-top: 20px; }
+.social-link { 
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%;
+  background: rgba(250, 249, 246, 0.08);
+  border: 1px solid rgba(234, 230, 223, 0.2);
+  color: var(--off-white); 
+  transition: all .25s ease; 
+  padding: 8px;
+}
+.social-link:hover { 
+  background: var(--champagne-gold);
+  border-color: var(--champagne-gold);
+  color: var(--navy); 
+  transform: translateY(-2px); 
+}
+.social-link svg, .contact-action svg { 
+  width: 100%; 
+  height: 100%; 
+  fill: none; 
+  stroke: currentColor; 
+  stroke-width: 1.9; 
+  stroke-linecap: round; 
+  stroke-linejoin: round; 
+}
+.social-link .icon-fill { fill: currentColor; stroke: none; }
+
+.newsletter-column { padding-top: 3px; }
+.newsletter-input-row {
+  width: 100%;
+  min-height: 58px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--off-white);
+  border: 1px solid var(--light-beige);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+.newsletter-input-row input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 0 20px;
+  color: var(--charcoal);
+  background: transparent;
+  font-size: 16px;
+}
+.newsletter-input-row input::placeholder { color: #828B99; opacity: 1; }
+.subscribe-button {
+  min-width: 150px;
+  border: 0;
+  padding: 0 24px;
+  background: var(--champagne-gold);
+  color: #1C2B4A;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.subscribe-button:hover { 
+  background: var(--gold-hover); 
+}
+.terms-row { cursor: pointer; font-size: 14px; color: var(--footer-muted); }
+.terms-row input { 
+  width: 18px; 
+  height: 18px; 
+  accent-color: var(--champagne-gold); 
+  cursor: pointer; 
+}
+.terms-link { 
+  color: var(--champagne-gold); 
+  text-decoration: none; 
+}
+.terms-link:hover { text-decoration: underline; }
+.newsletter-message { min-height: 22px; margin: 10px 0 0; font-size: 14px; }
+.newsletter-message.success { color: #8AE6AC; }
+.newsletter-message.error { color: #FCA5A5; }
+
+.footer-navigation {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 50px;
+  padding-bottom: 44px;
+}
+.footer-nav-group ul { list-style: none; margin: 18px 0 0; padding: 0; }
+.footer-nav-group li + li { margin-top: 11px; }
+.footer-nav-group a, .bottom-links a {
+  color: var(--footer-muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color .2s, transform .2s;
+  display: inline-block;
+}
+.footer-nav-group a:hover, .bottom-links a:hover { 
+  color: var(--champagne-gold); 
+  transform: translateX(2px);
+}
+
+.licensing-section {
+  border-top: 1px solid var(--footer-line);
+  padding: 30px 0 26px;
+}
+.license-details { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 16px 36px; 
+  margin-top: 14px; 
+}
+.license-details p { margin: 0; color: var(--footer-muted); font-size: 14px; }
+.license-details span { color: var(--champagne-gold); font-weight: 600; margin-right: 6px; }
+
+.footer-bottom {
+  border-top: 1px solid var(--footer-line);
+  padding: 22px 0 28px;
+  color: var(--footer-muted);
+  font-size: 14px;
+}
+.footer-bottom p { margin: 0; }
+.bottom-links { flex-wrap: wrap; }
+.bottom-links a { font-size: 14px; }
+
+/* Floating contact actions — styled with Navy and Champagne Gold */
+.floating-contact {
+  position: fixed;
+  z-index: 50;
+  right: 0;
+  top: 35%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 28px rgba(28, 43, 74, 0.35);
+}
+.contact-action {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: var(--off-white);
+  background: var(--navy);
+  border: 1px solid rgba(184, 146, 90, 0.3);
+  border-right: 0;
+  transition: width .25s ease, background .25s ease, color .25s ease;
+}
+.contact-action:first-child { border-radius: 14px 0 0 0; }
+.contact-action:last-child { border-radius: 0 0 0 14px; }
+.contact-action:hover { 
+  width: 64px; 
+  background: var(--champagne-gold); 
+  color: var(--navy); 
+}
+.contact-action svg { width: 22px; height: 22px; }
+.whatsapp-action { 
+  background: var(--champagne-gold); 
+  color: var(--navy); 
+}
+.whatsapp-action:hover { 
+  background: var(--gold-hover); 
+  color: var(--navy); 
+}
+.email-action { 
+  background: var(--navy-dark); 
+}
+
+@media (max-width: 1023px) {
+  .top-grid { gap: 3.5rem; }
+  .footer-navigation { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .site-footer { padding-top: 40px; }
+  .top-grid { grid-template-columns: 1fr; gap: 36px; }
+  .brand-mark { width: 54px; height: 54px; font-size: 38px; }
+  .brand-name { font-size: 28px; }
+  .brand-tagline { margin-top: 12px; font-size: 15px; }
+  .social-block { margin-top: 32px; }
+  .footer-heading { font-size: 17px; }
+  .newsletter-input-row { min-height: 52px; }
+  .newsletter-input-row input { padding: 0 14px; font-size: 15px; }
+  .subscribe-button { min-width: 110px; padding: 0 14px; font-size: 14px; }
+  .terms-row { font-size: 13px; align-items: flex-start; }
+  .footer-navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; margin-top: 36px; }
+  .footer-nav-group ul { margin-top: 12px; }
+  .footer-nav-group a { font-size: 14px; }
+  .licensing-section { padding: 22px 0; }
+  .license-details { flex-direction: column; gap: 8px; }
+  .license-details p { font-size: 13px; }
+  .footer-bottom { font-size: 13px; }
+  .floating-contact { 
+    top: auto; 
+    bottom: 20px; 
+    right: 14px; 
+    flex-direction: row; 
+    border-radius: 999px; 
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(28, 43, 74, 0.45); 
+    border: 1px solid rgba(184, 146, 90, 0.4);
+  }
+  .contact-action, .contact-action:first-child, .contact-action:last-child { 
+    width: 48px; 
+    height: 48px; 
+    padding: 13px; 
+    border-radius: 0; 
+    border: 0;
+  }
+  .contact-action:hover { width: 48px; }
+  .contact-action svg { width: 20px; height: 20px; }
+}
+
+@media (max-width: 420px) {
+  .footer-navigation { grid-template-columns: 1fr 1fr; gap: 24px 14px; }
+  .brand-name { font-size: 24px; }
+  .subscribe-button { min-width: 95px; }
+}

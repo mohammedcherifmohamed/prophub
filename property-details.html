@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1C2B4A" />
+  <title>Villa Mio | Enova Property Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#1C2B4A",
+            gold: "#B8925A",
+            cream: "#FAF9F6",
+            beige: "#EAE6DF",
+            charcoal: "#1A1F2B"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            editorial: ["Georgia", "serif"]
+          },
+          boxShadow: {
+            soft: "0 8px 28px rgba(28,43,74,.08)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="footer/style.css" />
+</head>
+<body class="bg-cream text-charcoal antialiased">
+  <header class="sticky top-0 z-40 bg-navy text-white shadow-md">
+    <div class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-3 lg:px-10">
+      <a href="index.html" class="flex items-center gap-2 text-2xl font-bold tracking-tight" aria-label="Enova home">
+        <span class="text-gold text-3xl leading-none">E</span><span>Enova</span>
+      </a>
+      <nav id="desktopNav" class="hidden items-center gap-7 text-sm md:flex">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="land-off/index.html">Off-Plan Projects</a>
+        <a class="nav-link text-gold font-semibold" href="property-details.html">Villa Mio Details</a>
+        <a class="nav-link" href="contact.html">Private Advisory</a>
+        <a class="nav-link" href="contact.html">Home Valuation</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden rounded-full border border-white/25 px-5 py-2 text-sm font-semibold transition hover:bg-white/10 sm:inline-flex">Sign up or Log in →</a>
+        <button id="menuButton" class="rounded-lg border border-white/30 p-2 md:hidden" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="hidden border-t border-white/10 px-5 py-4 md:hidden">
+      <div class="grid gap-3 text-sm">
+        <a href="index.html">Home</a>
+        <a href="land-off/index.html">Off-Plan Projects</a>
+        <a href="property-details.html" class="text-gold font-semibold">Villa Mio Details</a>
+        <a href="contact.html">Private Advisory</a>
+        <a href="contact.html">Home Valuation</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="property" class="mx-auto max-w-[1440px] px-4 pb-16 pt-5 sm:px-6 lg:px-10">
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-3 text-sm text-slate-600">
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="land-off/index.html" class="inline-flex items-center gap-2 font-medium text-navy hover:text-gold transition">
+          <span aria-hidden="true">←</span> Back to search results
+        </a>
+        <span class="hidden h-5 w-px bg-beige sm:block"></span>
+        <div class="flex flex-wrap items-center gap-2">
+          <a href="index.html" class="hover:text-navy">Home</a><span>/</span>
+          <a href="land-off/index.html" class="hover:text-navy">Property Search</a><span>/</span>
+          <a href="land-off/index.html" class="hover:text-navy">Spain</a><span>/</span>
+          <a href="land-off/index.html" class="hover:text-navy">Costa del Sol</a><span>/</span>
+          <span class="text-navy font-semibold">Benahavis</span>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button id="shareButton" class="action-button"><span>↗</span> Share</button>
+        <button id="saveButton" class="action-button"><span id="saveIcon">♡</span> <span id="saveLabel">Save</span></button>
+      </div>
+    </div>
+
+    <!-- Image gallery -->
+    <section class="gallery-grid overflow-hidden rounded-xl" aria-label="Property photo gallery">
+      <div class="gallery-main relative min-h-[260px] cursor-pointer" title="Click to view full screen">
+        <img id="heroImage" class="gallery-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=90" alt="Modern white luxury villa exterior" />
+        <button class="gallery-arrow left-4" id="previousImage" aria-label="Previous photo">‹</button>
+        <button class="gallery-arrow right-4" id="nextImage" aria-label="Next photo">›</button>
+        <div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+          <button class="gallery-tool" data-tool="3D Tour">◇ <span>3D Tour</span></button>
+          <button class="gallery-tool" data-tool="Floor Plan">▧ <span>Floor Plan</span></button>
+          <button class="gallery-tool" data-tool="Street View">⌖ <span>Street View</span></button>
+          <button class="gallery-tool" data-tool="Map">▣ <span>Map</span></button>
+        </div>
+      </div>
+      <button class="gallery-side relative" data-gallery-index="1" aria-label="View bedroom photo">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85" alt="Elegant modern bedroom" />
+      </button>
+      <div class="gallery-stack">
+        <button class="relative" data-gallery-index="2" aria-label="View kitchen photo">
+          <img class="gallery-image" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Luxury modern kitchen" />
+        </button>
+        <button class="relative" data-gallery-index="3" aria-label="View living room photo">
+          <img class="gallery-image" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Bright luxury living room" />
+          <span class="photo-count">▧ <span id="photoCount">1</span>/41</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="mt-7 grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_360px] xl:gap-10">
+      <div class="min-w-0">
+        <section id="details" class="border-b border-beige pb-6">
+          <p class="mb-2 text-3xl font-bold tracking-tight text-navy sm:text-4xl">$13,309,106</p>
+          <h1 class="max-w-4xl text-xl font-semibold leading-snug text-navy sm:text-2xl">Villa Mio Is A Newly Constructed Villa In El Madroñal, Designed By Architect Antonio Morillo.</h1>
+          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-600">
+            <span><strong class="text-navy">3</strong> Beds</span><span>•</span><span><strong class="text-navy">3</strong> Baths</span><span>•</span><span><strong class="text-navy">1,844</strong> sq.ft</span>
+          </div>
+          <p class="mt-3 flex items-center gap-2 text-sm text-slate-600">⌖ <span>El Madroñal, Benahavis, Spain</span></p>
+          <div class="mt-3 flex flex-wrap items-center gap-5 text-sm text-slate-600">
+            <span>◷ Updated: March 9</span><span>◎ 468 views</span><span>♡ 47 saves</span>
+          </div>
+        </section>
+
+        <section class="flex flex-wrap gap-4 border-b border-beige py-5">
+          <button class="media-tile" data-tool="All photos (41)">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=300&q=80" alt="Villa exterior thumbnail"><span>All photos (41)</span>
+          </button>
+          <button class="media-tile" data-tool="Floor plan">
+            <div class="floorplan-thumb" aria-hidden="true"><span></span><span></span><span></span><span></span></div><span>Floor Plan</span>
+          </button>
+          <button class="media-tile" data-tool="Video">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=300&q=80" alt="Property video thumbnail"><span>Video</span>
+          </button>
+        </section>
+
+        <section id="about" class="py-7">
+          <h2 class="font-editorial text-3xl tracking-tight text-navy">About the Property</h2>
+          <div id="description" class="mt-5 space-y-3 text-[15px] leading-relaxed text-slate-600">
+            <p>Villa Mio is a newly constructed architectural masterpiece for sale in El Madroñal, Benahavis. Designed by acclaimed architect Antonio Morillo, this luxury villa is set to complete in 2025 and redefines high-end hillside living on the Costa del Sol.</p>
+            <p>With striking design, elevated positioning, and panoramic sea and mountain views, the property offers an exclusive lifestyle in one of southern Spain’s most secure and prestigious gated communities.</p>
+            <p>Spanning 1,520 square metres across three levels with 492 square metres of terraces, the villa seamlessly blends contemporary sophistication with Mediterranean charm. A long private driveway leads to generous entertaining spaces, landscaped gardens, and exceptional indoor-outdoor living.</p>
+          </div>
+          <button id="readMoreButton" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gold">Read More <span id="readMoreChevron">⌄</span></button>
+        </section>
+
+        <section class="grid grid-cols-2 gap-5 border-t border-beige py-6 sm:grid-cols-4">
+          <div><p class="text-xs text-slate-500">Property type</p><p class="mt-2 font-semibold text-navy">Villa</p></div>
+          <div><p class="text-xs text-slate-500">Floors</p><p class="mt-2 font-semibold text-navy">3</p></div>
+          <div><p class="text-xs text-slate-500">Year built</p><p class="mt-2 font-semibold text-navy">2025</p></div>
+          <div><p class="text-xs text-slate-500">Price/sqm</p><p class="mt-2 font-semibold text-navy">$12,946</p></div>
+        </section>
+
+        <div class="mt-6 rounded-xl border border-gold/30 bg-white p-5 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-navy">Interested in scheduling a private on-site inspection?</h4>
+            <p class="text-xs text-slate-600 mt-0.5">Direct helicopter or chauffeur transfer from Malaga or Marbella can be arranged.</p>
+          </div>
+          <a href="contact.html" class="rounded-lg bg-navy px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#253961]">
+            Schedule Private Inspection →
+          </a>
+        </div>
+      </div>
+
+      <!-- Agent contact card -->
+      <aside id="contact" class="contact-card lg:sticky lg:top-24">
+        <div class="mb-6 flex items-center gap-4">
+          <img class="h-16 w-16 rounded-full object-cover ring-2 ring-gold/30" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=240&q=85" alt="Fernanda Collet, property agent">
+          <div>
+            <h2 class="font-semibold text-navy">Fernanda Collet</h2>
+            <p class="mt-1 text-xs text-slate-500">Senior Luxury Advisor • Enova Private Office</p>
+          </div>
+        </div>
+        <form id="contactForm" class="space-y-4">
+          <label class="form-label">First name *<input required name="firstName" autocomplete="given-name" placeholder="First name" class="form-input"></label>
+          <label class="form-label">Email *<input required type="email" name="email" autocomplete="email" placeholder="Your email address" class="form-input"></label>
+          <label class="form-label">Phone number<div class="mt-2 flex gap-2"><select aria-label="Country code" class="form-input w-[82px]"><option>US</option><option>ES</option><option>DE</option><option>GB</option><option>AE</option></select><input type="tel" name="phone" autocomplete="tel" placeholder="+1 (555) 000-0000" class="form-input min-w-0 flex-1"></div></label>
+          <label class="form-label">Message *<textarea required name="message" rows="3" class="form-input resize-y" placeholder="I am interested in Villa Mio and would like to receive the full private dossier and schedule a consultation."></textarea></label>
+          <button type="submit" class="w-full rounded-lg bg-navy px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#263c65]">Send Inquiry to Fernanda</button>
+          <a href="tel:+97142000000" class="flex w-full items-center justify-center gap-2 rounded-lg border border-beige px-4 py-3 text-sm font-medium text-navy transition hover:border-gold hover:bg-white">♧ Direct Phone: +971 4 200 0000</a>
+          <p id="formFeedback" class="hidden text-sm" role="status"></p>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy/95 p-4" role="dialog" aria-modal="true" aria-label="Property photo viewer">
+    <button id="closeLightbox" class="absolute right-5 top-5 rounded-full border border-white/40 px-4 py-2 text-white hover:bg-white/10">Close ✕</button>
+    <button id="lightboxPrev" class="lightbox-arrow left-4" aria-label="Previous image">‹</button>
+    <img id="lightboxImage" class="max-h-[82vh] max-w-[90vw] rounded-lg object-contain" src="" alt="Property gallery image">
+    <button id="lightboxNext" class="lightbox-arrow right-4" aria-label="Next image">›</button>
+    <p id="lightboxCaption" class="absolute bottom-5 text-sm text-white/80">Photo 1 of 41</p>
+  </div>
+
+  <!-- Complete Enova Luxury Footer (Navy & Champagne Gold) -->
+  <footer class="site-footer text-[#FAF9F6]">
+    <div class="footer-container mx-auto max-w-[1440px] px-6 md:px-10">
+
+      <!-- Brand + newsletter -->
+      <div class="top-grid grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr]">
+        <div class="brand-column">
+          <a href="index.html" class="brand-lockup inline-flex items-center gap-3" aria-label="Enova Real Estate home">
+            <span class="brand-mark" aria-hidden="true">E<span>.</span></span>
+            <span class="brand-name">Enova<span>.</span></span>
+          </a>
+          <p class="brand-tagline">Bold. Disciplined. Committed to Luxury Living.</p>
+
+          <div class="social-block">
+            <h2 class="footer-heading">Follow Enova on Social Media</h2>
+            <div class="social-links flex items-center gap-3" aria-label="Social media links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v6h4v-6h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20M5 4h4l10 16h-4L5 4Z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r=".8" class="icon-fill"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5v.1M10 19v-6c0-2 1.2-4 3.5-4S17 11 17 13v6M10 9v10"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z" class="icon-fill"/></svg>
+              </a>
+              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2 2 3.5 4.5 4.5l1.2-1 2 1c-.2 1.4-1.2 2-2.5 2-3.5-.4-6.8-3.7-7.2-7.2 0-1.3.6-2.3 2-2.5l1 2-1 1.2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-column">
+          <h2 class="footer-heading mb-4">Subscribe for private portfolio updates</h2>
+          <p class="mb-5 text-sm text-[#FAF9F6]/75">Receive curated off-market villa offerings, new development handovers, and quarterly market intelligence.</p>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <div class="newsletter-input-row flex">
+              <input
+                id="newsletterEmail"
+                type="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                aria-label="Your email address"
+                required
+              />
+              <button type="submit" class="subscribe-button">Subscribe</button>
+            </div>
+            <label class="terms-row mt-4 flex items-center gap-3">
+              <input id="termsCheckbox" type="checkbox" />
+              <span>I agree with the <a href="contact.html" class="terms-link">privacy policy &amp; terms</a></span>
+            </label>
+            <p id="newsletterMessage" class="newsletter-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer navigation -->
+      <nav class="footer-navigation grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-3 lg:grid-cols-6" aria-label="Footer navigation">
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Buy</h3>
+          <ul>
+            <li><a href="index.html#featured">Apartment</a></li>
+            <li><a href="property-details.html">Luxury Villa</a></li>
+            <li><a href="index.html#featured">Townhouses</a></li>
+            <li><a href="index.html#featured">Penthouse</a></li>
+            <li><a href="land-off/index.html">Prime Estates</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Off-Plan</h3>
+          <ul>
+            <li><a href="land-off/index.html">Dubai Marina</a></li>
+            <li><a href="land-off/index.html">Downtown Dubai</a></li>
+            <li><a href="land-off/index.html">Dubai Creek Harbour</a></li>
+            <li><a href="land-off/index.html">Business Bay</a></li>
+            <li><a href="land-off/index.html">Palm Jumeirah</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Explore</h3>
+          <ul>
+            <li><a href="index.html">Home Showcase</a></li>
+            <li><a href="land-off/index.html">All Projects</a></li>
+            <li><a href="property-details.html">Villa Mio Highlight</a></li>
+            <li><a href="contact.html">Valuation Tool</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">About Enova</h3>
+          <ul>
+            <li><a href="contact.html#about">Our Story</a></li>
+            <li><a href="contact.html#advisors">Private Client Advisors</a></li>
+            <li><a href="contact.html#offices">Global Offices</a></li>
+            <li><a href="contact.html#faq">Client FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Services</h3>
+          <ul>
+            <li><a href="contact.html">Home Valuation</a></li>
+            <li><a href="contact.html">Private Tour Booking</a></li>
+            <li><a href="land-off/index.html">Investment Advisory</a></li>
+            <li><a href="contact.html">Developer Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Direct Contact</h3>
+          <ul>
+            <li><a href="contact.html">Schedule Consultation</a></li>
+            <li><a href="tel:+97142000000">+971 4 200 0000</a></li>
+            <li><a href="mailto:concierge@enova-luxury.com">concierge@enova-luxury.com</a></li>
+            <li><a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp Advisory</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Licensing -->
+      <div class="licensing-section">
+        <h2 class="footer-heading mb-3">Licensing &amp; Regulatory Compliance</h2>
+        <div class="license-details">
+          <p><span>Licensed entity:</span> Enova Real Estate LLC &amp; Enova International Advisory</p>
+          <p><span>RERA ORN:</span> 28419</p>
+          <p><span>Dubai DED Licence:</span> 1084293</p>
+          <p><span>Registered HQ:</span> Level 32, Boulevard Plaza Tower 1, Downtown Dubai, UAE</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Enova Real Estate. All rights reserved.</p>
+        <div class="bottom-links flex gap-6">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating contact actions (Navy & Gold) -->
+  <div class="floating-contact" aria-label="Quick contact">
+    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="contact-action whatsapp-action" aria-label="WhatsApp Private Advisor">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2 2 3.5 4.5 4.5l1.2-1 2 1c-.2 1.4-1.2 2-2.5 2-3.5-.4-6.8-3.7-7.2-7.2 0-1.3.6-2.3 2-2.5l1 2-1 1.2Z"/></svg>
+    </a>
+    <a href="tel:+97142000000" class="contact-action" aria-label="Call Enova Office">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5 9 3l2 5-2 1.5a15 15 0 0 0 5.5 5.5L16 13l5 2-.5 2.5c-.3 1.5-1.7 2.5-3.2 2.2C9.8 18.2 5.8 14.2 4.3 6.7 4 5.2 5 3.8 6.5 3.5Z"/></svg>
+    </a>
+    <a href="contact.html" class="contact-action email-action" aria-label="Book Private Consultation">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+    </a>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

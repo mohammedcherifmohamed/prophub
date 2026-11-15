@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1C2B4A">
+  <title>Enova — Luxury Properties in Dubai &amp; Beyond</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#1C2B4A",
+            gold: "#B8925A",
+            cream: "#FAF9F6",
+            beige: "#EAE6DF",
+            charcoal: "#1A1F2B"
+          },
+          boxShadow: {
+            card: "0 12px 35px rgba(28,43,74,.10)",
+            floating: "0 20px 60px rgba(28,43,74,.18)"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ew/style.css">
+  <link rel="stylesheet" href="footer/style.css">
+</head>
+<body class="bg-cream text-charcoal antialiased">
+  <!-- Navigation -->
+  <header class="absolute inset-x-0 top-0 z-40">
+    <div class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-5 lg:px-10">
+      <a href="index.html" class="flex items-center gap-2.5 text-2xl font-extrabold tracking-tight text-navy" aria-label="Enova home">
+        <span class="brand-mark"><span></span></span>
+        <span>Enova<span class="text-gold">.</span></span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-semibold text-navy/90 lg:flex">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#featured">Featured Properties</a>
+        <a class="nav-link" href="land-off/index.html">Off-Plan Projects</a>
+        <a class="nav-link" href="property-details.html">Villa Mio Highlight</a>
+        <a class="nav-link" href="contact.html">Private Advisory</a>
+        <a class="nav-link" href="contact.html">Valuation</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button id="favoritesShortcut" class="relative hidden rounded-full p-2 text-navy transition hover:bg-white/60 sm:inline-flex" aria-label="View favorites">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6l1.2 1.2L12 21l7.6-7.6 1.2-1.2a5.4 5.4 0 0 0 0-7.6Z"/></svg>
+          <span id="favoriteCount" class="absolute -right-0.5 -top-0.5 hidden h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold text-white">0</span>
+        </button>
+        <span class="hidden h-7 w-px bg-navy/20 sm:block"></span>
+        <a href="contact.html" class="hidden items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#263b62] sm:inline-flex">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>
+          Login / Advisory
+        </a>
+        <button id="menuToggle" class="rounded-xl border border-navy/15 bg-white/70 p-2.5 text-navy lg:hidden" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileMenu" class="mx-4 hidden rounded-2xl border border-beige bg-cream p-5 shadow-card lg:hidden">
+      <div class="grid gap-4 text-sm font-semibold text-navy">
+        <a href="#home">Home</a>
+        <a href="#featured">Featured Properties</a>
+        <a href="land-off/index.html">Off-Plan Projects</a>
+        <a href="property-details.html">Villa Mio Highlight</a>
+        <a href="contact.html">Private Advisory &amp; Valuation</a>
+        <a href="contact.html" class="rounded-full bg-navy px-5 py-3 text-center text-white">Login / Advisory</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero-section relative isolate min-h-[780px] overflow-hidden">
+      <div class="hero-image absolute inset-0 -z-20"></div>
+      <div class="hero-overlay absolute inset-0 -z-10"></div>
+      <div class="hero-glow absolute -left-40 top-40 -z-10 h-[520px] w-[520px] rounded-full"></div>
+
+      <div class="mx-auto flex min-h-[780px] max-w-[1440px] flex-col px-5 pb-8 pt-36 lg:px-10 lg:pt-40">
+        <div class="max-w-[650px]">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/60 bg-cream/75 px-4 py-2 text-sm font-semibold text-navy shadow-sm backdrop-blur">
+            <span class="h-2 w-2 rounded-full bg-gold"></span>
+            Your Dream Home Awaits
+          </div>
+          <h1 class="max-w-[660px] text-[clamp(2.8rem,5.7vw,5.4rem)] font-extrabold leading-[1.02] tracking-[-.055em] text-navy">
+            Find Your Perfect Property in <span class="text-gold">Dubai</span>
+          </h1>
+          <p class="mt-6 max-w-[480px] text-lg leading-relaxed text-charcoal/80 sm:text-xl">
+            Buy, rent, or invest in the world’s most iconic city with confidence.
+          </p>
+        </div>
+
+        <!-- Search panel -->
+        <div class="search-wrap mx-auto mt-14 w-full max-w-[1000px] lg:mt-12">
+          <div class="search-tabs mx-auto flex w-fit items-center gap-1 rounded-t-[22px] border border-white/60 bg-cream/75 p-1.5 shadow-floating backdrop-blur-xl">
+            <button class="search-tab selected" data-mode="Buy"><span>⌂</span> Buy</button>
+            <button class="search-tab" data-mode="Rent"><span>⌁</span> Rent</button>
+            <button class="search-tab" data-mode="Off-Plan"><span>▥</span> Off-Plan</button>
+          </div>
+          <form id="propertySearch" class="search-panel grid grid-cols-1 gap-2 rounded-[24px] border border-white/70 bg-cream/85 p-3 shadow-floating backdrop-blur-xl md:grid-cols-[1.35fr_1fr_1fr_auto] md:items-center md:rounded-[26px] md:p-3.5">
+            <label class="search-field location-field">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-gold" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+              <input id="locationInput" type="text" placeholder="Search by location..." aria-label="Search by location">
+            </label>
+            <label class="search-field">
+              <select id="typeSelect" aria-label="Property type">
+                <option value="">Any Property Type</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Penthouse</option>
+                <option>Townhouse</option>
+              </select>
+            </label>
+            <label class="search-field">
+              <select id="priceSelect" aria-label="Price range">
+                <option value="">Any Price</option>
+                <option>Under AED 1M</option>
+                <option>AED 1M – 3M</option>
+                <option>AED 3M – 6M</option>
+                <option>AED 6M+</option>
+              </select>
+            </label>
+            <button type="submit" class="search-submit">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+              Search
+            </button>
+          </form>
+        </div>
+
+        <div class="trust-row mt-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pb-4 pt-14 text-sm font-medium text-white sm:gap-x-10">
+          <div class="trust-item"><span class="trust-icon">♢</span> Trusted &amp; Secure</div>
+          <span class="trust-divider"></span>
+          <div class="trust-item"><span class="trust-icon">♧</span> 24/7 Support</div>
+          <span class="trust-divider"></span>
+          <div class="trust-item"><span class="trust-icon">◇</span> Expert Agents</div>
+          <span class="trust-divider"></span>
+          <div class="trust-item"><span class="trust-icon">↗</span> Best Market Deals</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured properties -->
+    <section id="featured" class="featured-section relative overflow-hidden bg-cream py-20 sm:py-24">
+      <div class="featured-watermark" aria-hidden="true"></div>
+      <div class="featured-curve" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-[1440px] px-5 lg:px-10">
+        <div class="mb-10 flex flex-col justify-between gap-7 xl:flex-row xl:items-end">
+          <div>
+            <div class="section-kicker"><span></span> Featured Properties</div>
+            <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-.04em] text-navy sm:text-5xl">Handpicked Properties in Dubai</h2>
+            <p class="mt-4 max-w-3xl text-lg text-charcoal/70 sm:text-xl">Discover our selection of premium properties in the most sought-after locations.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="land-off/index.html" class="all-properties-btn">View All Projects <span>→</span></a>
+            <button id="slidePrev" class="slider-arrow" aria-label="Previous properties">←</button>
+            <button id="slideNext" class="slider-arrow next" aria-label="Next properties">→</button>
+          </div>
+        </div>
+
+        <div id="propertyTrack" class="property-track">
+          <!-- Card 1 -->
+          <article class="property-card cursor-pointer" data-location="Downtown Dubai" data-type="Apartment" data-price="2750000" onclick="window.location.href='property-details.html'">
+            <div class="property-photo-wrap">
+              <img class="property-photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=88" alt="Luxury apartment living room overlooking Downtown Dubai">
+              <button class="favorite-button" aria-label="Save Luxury Apartment in Downtown" aria-pressed="false">♡</button>
+              <span class="photo-badge"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg> 12 Photos</span>
+            </div>
+            <div class="property-content">
+              <h3>Luxury Apartment in Downtown</h3>
+              <p class="property-location"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Downtown Dubai</p>
+              <div class="property-specs">
+                <span><b>▤</b> 2 Beds</span><i></i><span><b>♧</b> 2 Baths</span><i></i><span><b>□</b> 1,320 sq.ft</span>
+              </div>
+              <div class="property-footer">
+                <strong>AED 2,750,000</strong>
+                <a href="property-details.html" onclick="event.stopPropagation()">View Details <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="property-card cursor-pointer" data-location="Dubai Marina" data-type="Apartment" data-price="1250000" onclick="window.location.href='land-off/index.html'">
+            <div class="property-photo-wrap">
+              <img class="property-photo" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=88" alt="Modern apartment in Dubai Marina">
+              <button class="favorite-button" aria-label="Save Modern Apartment in Dubai Marina" aria-pressed="false">♡</button>
+              <span class="photo-badge"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg> 12 Photos</span>
+            </div>
+            <div class="property-content">
+              <h3>Modern Apartment in Dubai Marina</h3>
+              <p class="property-location"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Dubai Marina</p>
+              <div class="property-specs">
+                <span><b>▤</b> 1 Bed</span><i></i><span><b>♧</b> 1 Bath</span><i></i><span><b>□</b> 890 sq.ft</span>
+              </div>
+              <div class="property-footer">
+                <strong>AED 1,250,000</strong>
+                <a href="land-off/index.html" onclick="event.stopPropagation()">View Details <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="property-card cursor-pointer" data-location="Business Bay" data-type="Penthouse" data-price="5900000" onclick="window.location.href='property-details.html'">
+            <div class="property-photo-wrap">
+              <img class="property-photo" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=88" alt="Luxury penthouse with panoramic Dubai skyline view">
+              <button class="favorite-button" aria-label="Save Penthouse with Burj Khalifa View" aria-pressed="false">♡</button>
+              <span class="photo-badge"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg> 12 Photos</span>
+            </div>
+            <div class="property-content">
+              <h3>Penthouse with Burj Khalifa View</h3>
+              <p class="property-location"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Business Bay</p>
+              <div class="property-specs">
+                <span><b>▤</b> 3 Beds</span><i></i><span><b>♧</b> 4 Baths</span><i></i><span><b>□</b> 2,450 sq.ft</span>
+              </div>
+              <div class="property-footer">
+                <strong>AED 5,900,000</strong>
+                <a href="property-details.html" onclick="event.stopPropagation()">View Details <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="property-card cursor-pointer" data-location="Palm Jumeirah" data-type="Villa" data-price="8900000" onclick="window.location.href='property-details.html'">
+            <div class="property-photo-wrap">
+              <img class="property-photo" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=88" alt="Contemporary villa interior">
+              <button class="favorite-button" aria-label="Save Palm Jumeirah Villa" aria-pressed="false">♡</button>
+              <span class="photo-badge">▣ 18 Photos</span>
+            </div>
+            <div class="property-content">
+              <h3>Contemporary Villa on Palm Jumeirah</h3>
+              <p class="property-location">⌖ Palm Jumeirah</p>
+              <div class="property-specs">
+                <span><b>▤</b> 4 Beds</span><i></i><span><b>♧</b> 5 Baths</span><i></i><span><b>□</b> 3,100 sq.ft</span>
+              </div>
+              <div class="property-footer">
+                <strong>AED 8,900,000</strong>
+                <a href="property-details.html" onclick="event.stopPropagation()">View Details <span>→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p id="searchMessage" class="mt-6 hidden text-center text-sm font-medium text-navy"></p>
+      </div>
+    </section>
+
+    <!-- Services band -->
+    <section id="services" class="bg-white py-14">
+      <div class="mx-auto grid max-w-[1440px] grid-cols-2 gap-8 px-5 text-center sm:grid-cols-4 lg:px-10">
+        <div><div class="service-icon">♢</div><h3>Trusted &amp; Secure</h3><p>Verified RERA property listings</p></div>
+        <div><div class="service-icon">♧</div><h3>Expert Guidance</h3><p>Local market specialists</p></div>
+        <div><div class="service-icon">⌂</div><h3>Premium Selection</h3><p>Homes worth discovering</p></div>
+        <div><div class="service-icon">↗</div><h3>Smart Investment</h3><p>Make confident decisions</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-[1440px] px-5 py-16 lg:px-10">
+      <div class="rounded-3xl bg-navy px-7 py-10 text-center text-white sm:px-12 sm:py-14">
+        <p class="text-xs font-bold uppercase tracking-[.25em] text-gold">The Enova Experience</p>
+        <h2 class="mt-4 text-3xl font-bold sm:text-4xl">A better way to find your place in Dubai.</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base">Explore handpicked homes, compare sought-after communities, and connect with property professionals who understand your goals.</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="inline-flex rounded-full bg-gold px-7 py-3 font-semibold text-navy transition hover:bg-[#caa66d]">Talk to an Agent <span class="ml-2">→</span></a>
+          <a href="land-off/index.html" class="inline-flex rounded-full border border-white/30 px-7 py-3 font-semibold text-white transition hover:bg-white/10">Explore Off-Plan Catalog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Enova Luxury Footer with exact Navy & Champagne Gold palette -->
+  <footer class="site-footer text-[#FAF9F6]">
+    <div class="footer-container mx-auto max-w-[1440px] px-6 md:px-10">
+
+      <!-- Brand + newsletter -->
+      <div class="top-grid grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr]">
+        <div class="brand-column">
+          <a href="index.html" class="brand-lockup inline-flex items-center gap-3" aria-label="Enova Real Estate home">
+            <span class="brand-mark" aria-hidden="true">E<span>.</span></span>
+            <span class="brand-name">Enova<span>.</span></span>
+          </a>
+          <p class="brand-tagline">Bold. Disciplined. Committed to Luxury Living.</p>
+
+          <div class="social-block">
+            <h2 class="footer-heading">Follow Enova on Social Media</h2>
+            <div class="social-links flex items-center gap-3" aria-label="Social media links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v6h4v-6h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20M5 4h4l10 16h-4L5 4Z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r=".8" class="icon-fill"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v10M5 5v.1M10 19v-6c0-2 1.2-4 3.5-4S17 11 17 13v6M10 9v10"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z" class="icon-fill"/></svg>
+              </a>
+              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2 2 3.5 4.5 4.5l1.2-1 2 1c-.2 1.4-1.2 2-2.5 2-3.5-.4-6.8-3.7-7.2-7.2 0-1.3.6-2.3 2-2.5l1 2-1 1.2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-column">
+          <h2 class="footer-heading mb-4">Subscribe for private portfolio updates</h2>
+          <p class="mb-5 text-sm text-[#FAF9F6]/75">Receive curated off-market villa offerings, new development handovers, and quarterly market intelligence.</p>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <div class="newsletter-input-row flex">
+              <input
+                id="newsletterEmail"
+                type="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                aria-label="Your email address"
+                required
+              />
+              <button type="submit" class="subscribe-button">Subscribe</button>
+            </div>
+            <label class="terms-row mt-4 flex items-center gap-3">
+              <input id="termsCheckbox" type="checkbox" />
+              <span>I agree with the <a href="contact.html" class="terms-link">privacy policy &amp; terms</a></span>
+            </label>
+            <p id="newsletterMessage" class="newsletter-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer navigation -->
+      <nav class="footer-navigation grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-3 lg:grid-cols-6" aria-label="Footer navigation">
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Buy</h3>
+          <ul>
+            <li><a href="#featured">Apartment</a></li>
+            <li><a href="property-details.html">Luxury Villa</a></li>
+            <li><a href="#featured">Townhouses</a></li>
+            <li><a href="#featured">Penthouse</a></li>
+            <li><a href="land-off/index.html">Prime Estates</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Off-Plan</h3>
+          <ul>
+            <li><a href="land-off/index.html">Dubai Marina</a></li>
+            <li><a href="land-off/index.html">Downtown Dubai</a></li>
+            <li><a href="land-off/index.html">Dubai Creek Harbour</a></li>
+            <li><a href="land-off/index.html">Business Bay</a></li>
+            <li><a href="land-off/index.html">Palm Jumeirah</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Explore</h3>
+          <ul>
+            <li><a href="index.html">Home Showcase</a></li>
+            <li><a href="land-off/index.html">All Projects</a></li>
+            <li><a href="property-details.html">Villa Mio Highlight</a></li>
+            <li><a href="contact.html">Valuation Tool</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">About Enova</h3>
+          <ul>
+            <li><a href="contact.html#about">Our Story</a></li>
+            <li><a href="contact.html#advisors">Private Client Advisors</a></li>
+            <li><a href="contact.html#offices">Global Offices</a></li>
+            <li><a href="contact.html#faq">Client FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Services</h3>
+          <ul>
+            <li><a href="contact.html">Home Valuation</a></li>
+            <li><a href="contact.html">Private Tour Booking</a></li>
+            <li><a href="land-off/index.html">Investment Advisory</a></li>
+            <li><a href="contact.html">Developer Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h3 class="footer-heading">Direct Contact</h3>
+          <ul>
+            <li><a href="contact.html">Schedule Consultation</a></li>
+            <li><a href="tel:+97142000000">+971 4 200 0000</a></li>
+            <li><a href="mailto:concierge@enova-luxury.com">concierge@enova-luxury.com</a></li>
+            <li><a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp Advisory</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Licensing -->
+      <div class="licensing-section">
+        <h2 class="footer-heading mb-3">Licensing &amp; Regulatory Compliance</h2>
+        <div class="license-details">
+          <p><span>Licensed entity:</span> Enova Real Estate LLC &amp; Enova International Advisory</p>
+          <p><span>RERA ORN:</span> 28419</p>
+          <p><span>Dubai DED Licence:</span> 1084293</p>
+          <p><span>Registered HQ:</span> Level 32, Boulevard Plaza Tower 1, Downtown Dubai, UAE</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Enova Real Estate. All rights reserved.</p>
+        <div class="bottom-links flex gap-6">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating contact actions (Navy & Gold) -->
+  <div class="floating-contact" aria-label="Quick contact">
+    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="contact-action whatsapp-action" aria-label="WhatsApp Private Advisor">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2 2 3.5 4.5 4.5l1.2-1 2 1c-.2 1.4-1.2 2-2.5 2-3.5-.4-6.8-3.7-7.2-7.2 0-1.3.6-2.3 2-2.5l1 2-1 1.2Z"/></svg>
+    </a>
+    <a href="tel:+97142000000" class="contact-action" aria-label="Call Enova Office">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5 9 3l2 5-2 1.5a15 15 0 0 0 5.5 5.5L16 13l5 2-.5 2.5c-.3 1.5-1.7 2.5-3.2 2.2C9.8 18.2 5.8 14.2 4.3 6.7 4 5.2 5 3.8 6.5 3.5Z"/></svg>
+    </a>
+    <a href="contact.html" class="contact-action email-action" aria-label="Book Private Consultation">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+    </a>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="ew/script.js"></script>
+</body>
+</html>
